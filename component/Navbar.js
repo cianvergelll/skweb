@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useSession, signOut } from "next-auth/react";
 
 export default function Navbar() {
     return (
@@ -36,8 +37,11 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                <button className="text-[#0438A8] p-2 rounded-lg w-1/8 mx-4 hover:text-white hover:bg-[#0438A8] hover:cursor-pointer transition-all duration-300 delay-50">Login</button>
-                <button className="bg-[#0438A8] text-white p-2 rounded-lg w-1/5 hover:text-[#0438A8] hover:bg-white hover:border hover:cursor-pointer transition-all duration-300 delay-50">Create an Account</button>
+                <button onClick={() => signOut({ callbackUrl: "/login" })} className="bg-[#0438A8] text-white p-2 rounded-lg w-1/5 hover:text-[#0438A8] hover:bg-white hover:border hover:cursor-pointer transition-all duration-300 delay-50">
+                    <Link href="/login">
+                        Sign Out
+                    </Link>
+                </button>
             </div>
         </div>
     );

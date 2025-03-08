@@ -4,9 +4,23 @@
 import Navbar from "@/component/Navbar";
 import SideNavbar from "@/component/SideNavbar";
 import { useParams } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ServiceForm() {
     const { service } = useParams();
+     const { data: session, status } = useSession();
+    const router = useRouter();
+    
+      useEffect(() => {
+        if (status === "unauthenticated") {
+          router.push("/login");
+        }
+      }, [status, router]);
+    
+      if (status === "loading") return <p className="p-6 text-blue-500">Loading...</p>;
+      if (!session) return null;
 
     return (
         <div className="h-screen w-full">
