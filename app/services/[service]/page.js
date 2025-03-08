@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 
 export default function ServiceForm() {
     const { service } = useParams();
-     const { data: session, status } = useSession();
+    const { data: session, status } = useSession();
     const router = useRouter();
     
       useEffect(() => {
@@ -32,7 +32,10 @@ export default function ServiceForm() {
                     <SideNavbar />
                 </div>
         
-                <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-col"><h1>You're requesting: {service}</h1>;</div>
+                <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-col">
+                
+                
+                </div>
             </div>
         </div>
     );

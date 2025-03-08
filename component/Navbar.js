@@ -37,7 +37,7 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                <button onClick={() => signOut({ callbackUrl: "/login" })} className="bg-[#0438A8] text-white p-2 rounded-lg w-1/5 hover:text-[#0438A8] hover:bg-white hover:border hover:cursor-pointer transition-all duration-300 delay-50">
+                <button onClick={() => signOut({ callbackUrl: "/login" })} className="bg-[#a80404] text-white p-2 rounded-lg w-1/5 hover:text-[#0438A8] hover:bg-white hover:border hover:cursor-pointer transition-all duration-300 delay-50">
                     <Link href="/login">
                         Sign Out
                     </Link>
