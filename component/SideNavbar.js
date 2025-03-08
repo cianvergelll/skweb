@@ -1,11 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SideNavbar() {
   return (
     <div className="h-full w-1/6 bg-[#F3F4F6] text-[#0438A8] flex justify-center items-start p-6 fixed left-0 top-24 z-49">
       <ul className="flex flex-col gap-6">
         <li className="mt-6 font-bold text-lg border-b-2 border-r-2 text-center border-[#0438A8] rounded-lg px-6 py-4 bg-white text-[#0438A8] shadow-md hover:bg-[#0438A8] hover:text-white hover:font-bold transition duration-200">
-          Certificates
+          <Link href="/services/certificates">
+            Certificates
+          </Link>
         </li>
         <li className="font-bold text-lg border-b-2 border-r-2 text-center border-[#0438A8] rounded-lg px-6 py-4 bg-white text-[#0438A8] shadow-md hover:bg-[#0438A8] hover:text-white hover:font-bold transition duration-200">
           Print Materials
