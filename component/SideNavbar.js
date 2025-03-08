@@ -11,7 +11,7 @@ export default function SideNavbar() {
           </Link>
         </li>
         <li className="font-bold text-lg border-b-2 border-r-2 text-center border-[#0438A8] rounded-lg px-6 py-4 bg-white text-[#0438A8] shadow-md hover:bg-[#0438A8] hover:text-white hover:font-bold transition duration-200">
-          <Link href="/services/print-materials">
+          <Link href="/services/print_materials">
             Print Materials
           </Link>
         </li>
@@ -21,12 +21,12 @@ export default function SideNavbar() {
           </Link>
         </li>
         <li className="font-bold text-lg border-b-2 border-r-2 text-center border-[#0438A8] rounded-lg px-6 py-4 bg-white text-[#0438A8] shadow-md hover:bg-[#0438A8] hover:text-white hover:font-bold transition duration-200">
-          <Link href="/services/vehicle-reservation">
+          <Link href="/services/vehicle_reservation">
             Vehicle Reservation
           </Link>
         </li>
         <li className="font-bold text-lg border-b-2 border-r-2 text-center border-[#0438A8] rounded-lg px-6 py-4 bg-white text-[#0438A8] shadow-md hover:bg-[#0438A8] hover:text-white hover:font-bold transition duration-200">
-          <Link href="/services/gym-reservation">
+          <Link href="/services/gym_reservation">
             Gym Reservation
           </Link>
         </li>

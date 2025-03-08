@@ -10,16 +10,12 @@ const formFields = {
         { name: "purpose", label: "Purpose", type: "text" },
     ],
     print_materials: [
-        { name: "fullName", label: "Full Name", type: "text" },
-        { name: "email", label: "Email", type: "email" },
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { name: "file", label: "File", type: "file" },
         { name: "copies", label: "Number of Copies", type: "number" },
         { name: "type", label: "Type of Print", type: "select", options: ["Colored", "B&W"] },
     ],
     partnership: [
-        { name: "fullName", label: "Full Name", type: "text" },
-        { name: "email", label: "Email", type: "email" },
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { name: "company_name", label: "Company Name", type: "text" },
         { name: "company_address", label: "Company Address", type: "text" },
@@ -35,8 +31,6 @@ const formFields = {
         { name: "file", label: "Proposal Letter/Plan", type: "file" },
     ],
     vehicle_reservation: [
-        { name: "fullName", label: "Full Name", type: "text" },
-        { name: "email", label: "Email", type: "email" },
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { 
             name: "vehicle_type", 
@@ -50,8 +44,6 @@ const formFields = {
         { name: "time", label: "Time", type: "time" },
     ],
     gym_reservation: [
-        { name: "fullName", label: "Full Name", type: "text" },
-        { name: "email", label: "Email", type: "email" },
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { name: "purpose", label: "Purpose", type: "text" },
         { name: "date", label: "Date", type: "date" },
