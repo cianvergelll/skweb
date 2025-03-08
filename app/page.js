@@ -7,8 +7,7 @@ export default function Home() {
       <Navbar />
 
       <div className="flex h-9/10">
-        <div className="bg-white w-1/6 p-4 border border-red-500"></div>
-        <div className="bg-white w-5/6 p-4"></div>
+        <div className="bg-white w-full p-4"></div>
       </div>
     </div>
 
