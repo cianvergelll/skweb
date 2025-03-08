@@ -21,22 +21,22 @@ export default function Services() {
                     </div>
 
                     <div className="w-full h-96 mb-5">
-                        <Link href="/">
+                        <Link href="/services/print-materials">
                             <img src="/print-materials.jpg" alt="Certificates Description" className="h-full w-full object-cover" />
                         </Link>
                     </div>
                     <div className="w-full h-96 mb-5">
-                        <Link href="/">
+                        <Link href="/services/partnership">
                             <img src="/partnership.jpg" alt="Certificates Description" className="h-full w-full object-cover" />
                         </Link>
                     </div>
                     <div className="w-full h-96 mb-5">
-                        <Link href="/">
+                        <Link href="/services/vehicle-reservation">
                             <img src="/vehicle-reservation.jpg" alt="Certificates Description" className="h-full w-full object-cover" />
                         </Link>
                     </div>
                     <div className="w-full h-96 mb-5">
-                        <Link href="/">
+                        <Link href="/services/gym-reservation">
                             <img src="/gym-reservation.jpg" alt="Certificates Description" className="h-full w-full object-cover" />
                         </Link>
                     </div>
