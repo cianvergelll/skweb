@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className=" bg-white text-center h-1/10 flex flex-row drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">
+        <div className="w-full bg-white text-center h-1/10 flex flex-row drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] fixed top-0 z-50">
             <div className="flex flex-row w-2/5">
     
                 {/*Title*/}
