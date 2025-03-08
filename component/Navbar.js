@@ -17,21 +17,21 @@ export default function Navbar() {
 
             <div className="p-4 text-center h-full flex flex-row w-3/5">
                 {/*Menu*/}
-                <ul className="flex flex-row justify-end w-full gap-5">
+                <ul className="flex flex-row justify-end w-full gap-5 mr-5">
                     <li className="py-5 px-10 rounded-md border-b-4 border-[#0438A8] hover:text-white hover:bg-[#0438A8] hover:cursor-pointer transition-all duration-300 delay-50">
                         <Link href="/about">
-                            About Us
+                            ABOUT US
                         </Link>
                     </li>
 
                     <li className="py-5 px-10 rounded-md border-b-4 border-[#CF1929] hover:text-white hover:bg-[#CF1929] hover:cursor-pointer transition-all duration-300 delay-50">
                         <Link href="/projects">
-                            Projects
+                            PROJECTS
                         </Link>
                     </li>
                     <li className="py-5 px-10 rounded-md border-b-4 border-[#FFBF38] hover:text-white hover:bg-[#FFBF38] hover:cursor-pointer transition-all duration-300 delay-50">
                         <Link href="/services">
-                            Services
+                            SERVICES
                         </Link>
                     </li>
                 </ul>
