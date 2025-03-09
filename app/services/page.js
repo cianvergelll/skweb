@@ -38,7 +38,7 @@ export default function Services() {
                     </div>
 
                     <div className="w-full h-96 mb-5">
-                        <Link href="/services/print-materials">
+                        <Link href="/services/print_materials">
                             <img src="/print-materials.jpg" alt="Certificates Description" className="h-full w-full object-cover" />
                         </Link>
                     </div>
@@ -48,12 +48,12 @@ export default function Services() {
                         </Link>
                     </div>
                     <div className="w-full h-96 mb-5">
-                        <Link href="/services/vehicle-reservation">
+                        <Link href="/services/vehicle_reservation">
                             <img src="/vehicle-reservation.jpg" alt="Certificates Description" className="h-full w-full object-cover" />
                         </Link>
                     </div>
                     <div className="w-full h-96 mb-5">
-                        <Link href="/services/gym-reservation">
+                        <Link href="/services/gym_reservation">
                             <img src="/gym-reservation.jpg" alt="Certificates Description" className="h-full w-full object-cover" />
                         </Link>
                     </div>

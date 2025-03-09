@@ -15,6 +15,14 @@ export default function ServiceForm() {
   const router = useRouter();
   const [formData, setFormData] = useState({});
 
+  const serviceButtonLabels = {
+        certificates: "Request Certificates",
+        print_materials: "Send Print Materials",
+        partnership: "Request Partnership",
+        vehicle_reservation: "Request Vehicle",
+        gym_reservation: "Request Gym",
+  }
+
   useEffect(() => {
       if (status === "unauthenticated") {
           router.push("/login");
@@ -52,7 +60,7 @@ export default function ServiceForm() {
               </div>
               <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-col justify-center items-start">
                   <h1 className="text-2xl font-bold mb-4">You're requesting: {service}</h1>
-                  <form onSubmit={handleSubmit} className="space-y-4 border w-1/2 p-10">
+                  <form onSubmit={handleSubmit} className="space-y-4 border w-1/2 px-10 py-5 rounded-3xl">
                       {fields.map((field, index) => (
                           <div key={index} className="flex flex-col">
                               <label className="font-medium">{field.label}</label>
@@ -84,8 +92,8 @@ export default function ServiceForm() {
                               )}
                           </div>
                       ))}
-                      <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-                          Submit
+                      <button type="submit" className="bg-blue-500 text-white p-2 rounded float-right">
+                            {serviceButtonLabels[service]}
                       </button>
                   </form>
               </div>
