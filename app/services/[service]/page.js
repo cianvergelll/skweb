@@ -7,21 +7,13 @@ import { useParams } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import formFields from "@/app/utils/formFields";
+import { serviceButtonLabels, formFields, serviceTitle } from "@/app/utils/formFields";
 
 export default function ServiceForm() {
   const { service } = useParams();
   const { data: session, status } = useSession();
   const router = useRouter();
   const [formData, setFormData] = useState({});
-
-  const serviceButtonLabels = {
-        certificates: "Request Certificates",
-        print_materials: "Send Print Materials",
-        partnership: "Request Partnership",
-        vehicle_reservation: "Request Vehicle",
-        gym_reservation: "Request Gym",
-  }
 
   useEffect(() => {
       if (status === "unauthenticated") {
@@ -59,7 +51,7 @@ export default function ServiceForm() {
                   <SideNavbar />
               </div>
               <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-col justify-center items-start">
-                  <h1 className="text-2xl font-bold mb-4">You're requesting: {service}</h1>
+                  <h1 className="text-2xl font-bold mb-4">You're requesting a {serviceTitle[service]}</h1>
                   <form onSubmit={handleSubmit} className="space-y-4 border w-1/2 px-10 py-5 rounded-3xl">
                       {fields.map((field, index) => (
                           <div key={index} className="flex flex-col">

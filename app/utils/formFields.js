@@ -1,4 +1,4 @@
-const formFields = {
+export const formFields = {
     certificates: [
         { name: "fullName", label: "Full Name", type: "text" },
         { name: "email", label: "Email", type: "email" },
@@ -51,5 +51,18 @@ const formFields = {
     ]
 };
 
-export default formFields;
+export const serviceButtonLabels = {
+        certificates: "Request Certificates",
+        print_materials: "Send Print Materials",
+        partnership: "Request Partnership",
+        vehicle_reservation: "Request Vehicle",
+        gym_reservation: "Request Gym",
+};
 
+export const serviceTitle = {
+    certificates: "Certificate",
+    print_materials: "Print Material",
+    partnership: "Partnership",
+    vehicle_reservation: "Vehicle",
+    gym_reservation: "Gym",
+};
