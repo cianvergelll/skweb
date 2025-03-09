@@ -76,6 +76,7 @@ export default function ServiceForm() {
                                       type={field.type}
                                       name={field.name}
                                       value={formData[field.name] || ""}
+                                      placeholder={field.label}
                                       onChange={handleInputChange}
                                       className="p-2 border border-gray-300 rounded"
                                       required
