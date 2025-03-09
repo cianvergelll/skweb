@@ -50,9 +50,9 @@ export default function ServiceForm() {
               <div className="h-full w-1/6 bg-gray-800 text-white fixed left-0 top-24 z-49"> 
                   <SideNavbar />
               </div>
-              <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-col">
+              <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-col justify-center items-start">
                   <h1 className="text-2xl font-bold mb-4">You're requesting: {service}</h1>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4 border w-1/2 p-10">
                       {fields.map((field, index) => (
                           <div key={index} className="flex flex-col">
                               <label className="font-medium">{field.label}</label>
