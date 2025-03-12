@@ -55,7 +55,7 @@ export default function ServiceForm() {
           <SideNavbar />
         </div>
         <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-row justify-center items-start h-[calc(100vh-10vh)]">
-          <div className="h-full w-[55%]">
+          <div className="h-full w-[55%] mr-5">
             <h1 className="text-2xl font-bold mb-4 ml-4">
               You're requesting a {serviceTitle[service]}
             </h1>
