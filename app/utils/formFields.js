@@ -9,12 +9,14 @@ export const formFields = {
         { name: "sitio", label: "Sitio Location", type: "text" },
         { name: "purpose", label: "Purpose", type: "text" },
     ],
+
     print_materials: [
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { name: "file", label: "File", type: "file" },
         { name: "copies", label: "Number of Copies", type: "number" },
         { name: "type", label: "Type of Print", type: "select", options: ["Colored", "B&W"] },
     ],
+
     partnership: [
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { name: "company_name", label: "Company Name", type: "text" },
@@ -30,6 +32,7 @@ export const formFields = {
         { name: "company_partnership_purpose", label: "Company Partnership Purpose", type: "text" },
         { name: "file", label: "Proposal Letter/Plan", type: "file" },
     ],
+
     vehicle_reservation: [
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { 
@@ -43,6 +46,7 @@ export const formFields = {
         { name: "date", label: "Date", type: "date" },
         { name: "time", label: "Time", type: "time" },
     ],
+
     gym_reservation: [
         { name: "phone_number", label: "Phone Number", type: "tel" },
         { name: "purpose", label: "Purpose", type: "text" },
@@ -52,11 +56,11 @@ export const formFields = {
 };
 
 export const serviceButtonLabels = {
-        certificates: "Request Certificates",
-        print_materials: "Send Print Materials",
-        partnership: "Request Partnership",
-        vehicle_reservation: "Request Vehicle",
-        gym_reservation: "Request Gym",
+    certificates: "Request Certificates",
+    print_materials: "Send Print Materials",
+    partnership: "Request Partnership",
+    vehicle_reservation: "Request Vehicle",
+    gym_reservation: "Request Gym",
 };
 
 export const serviceTitle = {
