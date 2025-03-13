@@ -12,26 +12,37 @@ import {
   serviceTitle,
 } from "@/app/utils/formFields";
 
-export default function ServiceForm() {
+export default function ServiceForm({ onServicesRequested }) {
   const { service } = useParams();
   const { data: session, status } = useSession();
   const router = useRouter();
-  const [formData, setFormData] = useState({});
+
+  const fields = formFields[service] || [];
+  const initialFormData = fields.reduce((acc, field) => {
+    acc[field.name] = "";
+    return acc;
+  }, {});
+
+  const [formData, setFormData] = useState(initialFormData);
 
   useEffect(() => {
     if (status === "unauthenticated") {
       router.push("/login");
     }
-  }, [status, router]);
+    if (!service || !formFields[service]) {
+      router.push("/services");
+    }
+  }, [status, router, service, formFields]);
 
-  if (status === "loading")
-    return <p className="p-6 text-blue-500">Loading...</p>;
+  if (status === "loading") {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-blue-500">Loading...</p>
+      </div>
+    );
+  }
   if (!session) return null;
 
-  // Get the fields for the current service
-  const fields = formFields[service] || [];
-
-  // Handle input change
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -40,11 +51,34 @@ export default function ServiceForm() {
     });
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    // Add your form submission logic here
+    try {
+      const response = await fetch("/api/services", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...formData, userID: session.user.id }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const updatedServices = await fetch("/api/services").then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch updated services");
+        }
+        return res.json();
+      });
+
+      onServicesRequested(updatedServices);
+      router.push("/success"); // Redirect to a success page
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -54,8 +88,8 @@ export default function ServiceForm() {
         <div className="h-full w-1/6 bg-gray-800 text-white fixed left-0 top-24 z-49">
           <SideNavbar />
         </div>
-        <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-row justify-center items-start h-[calc(100vh-10vh)]">
-          <div className="h-full w-[55%] mr-4">
+        <div className="ml-[16.67%] mt-[10vh] bg-white w-5/6 p-4 flex flex-col md:flex-row justify-center items-start h-[calc(100vh-10vh)]">
+          <div className="h-full w-full md:w-[55%] mr-4">
             <h1 className="text-2xl font-bold mb-4 ml-4">
               You're requesting a {serviceTitle[service]}
             </h1>
@@ -97,14 +131,16 @@ export default function ServiceForm() {
                 </div>
               ))}
               <div className="flex justify-end">
-                <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-                    {serviceButtonLabels[service]}
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white p-2 rounded"
+                >
+                  {serviceButtonLabels[service]}
                 </button>
               </div>
             </form>
           </div>
-
-          <div className="h-full w-[45%] border border-red-500"></div>
+          <div className="h-full w-full md:w-[45%] border border-red-500 mt-4 md:mt-0"></div>
         </div>
       </div>
     </div>
