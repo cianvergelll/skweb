@@ -70,3 +70,11 @@ export const serviceTitle = {
     vehicle_reservation: "Vehicle",
     gym_reservation: "Gym",
 };
+
+export const serviceDatabase = {
+    certificates: "certificates_requests",
+    print_materials: "print_material_requests", 
+    partnership: "partnership_requests",
+    vehicle_reservation: "vehicle_reservations",
+    gym_reservation: "gym_reservations",
+}
