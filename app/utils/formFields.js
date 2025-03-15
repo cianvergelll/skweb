@@ -71,10 +71,10 @@ export const serviceTitle = {
     gym_reservation: "Gym",
 };
 
-export const serviceDatabase = {
-    certificates: "certificates_requests",
-    print_materials: "print_material_requests", 
-    partnership: "partnership_requests",
-    vehicle_reservation: "vehicle_reservations",
-    gym_reservation: "gym_reservations",
+export const serviceForm = {
+    certificates: "Certificates",
+    print_materials: "PrintMaterials", 
+    partnership: "Partnerships",
+    vehicle_reservation: "VehicleReservations",
+    gym_reservation: "GymReservations",
 }
